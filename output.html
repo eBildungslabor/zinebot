@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dein Zine ist fertig! 🎉</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const printLink = document.getElementById("printPdfLink");
+        const viewLink = document.getElementById("viewPdfLink");
+        const printUrl = localStorage.getItem("printPdfUrl");
+        const viewUrl = localStorage.getItem("viewPdfUrl");
+        if (printUrl && viewUrl) {
+          printLink.href = printUrl;
+          viewLink.href = viewUrl;
+        } else {
+          document.getElementById("output").innerHTML =
+            "<p>🛑 Es konnten keine Zine-Dateien geladen werden. Bitte kehre zurück zur Startseite und versuche es erneut.</p>";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Zinebot 🤖</h1>
+      <p>Dein Zine ist bereit zum Teilen und Drucken!</p>
+    </header>
+    <main id="output">
+      <h2>🎉 Fertig!</h2>
+      <p>Hier sind deine beiden Versionen:</p>
+      <ul>
+        <li><a id="viewPdfLink" class="contrast" download="zine-leseversion.pdf">📖 Lesefassung (Seite für Seite)</a></li>
+        <li><a id="printPdfLink" class="contrast" download="zine-druckversion.pdf">🖨️ Druckversion (für Falt-Zine)</a></li>
+      </ul>
+      <p><a href="index.html">🔁 Zurück zur Startseite</a></p>
+    </main>
+    <footer>
+      <p>Erstellt von Nele Hirsch <a href="https://ebildungslabor.de">(eBildungslabor)</a> unter Nutzung von ChatGPT 4.0 |
+        Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></p>
+    </footer>
+  </body>
+</html>

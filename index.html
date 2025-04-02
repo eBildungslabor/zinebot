@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinebot 🤖</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <script src="zinebot.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Zinebot 🤖</h1>
+      <p>Praktische Impulse zum Ausprobieren</p>
+    </header>
+    <main>
+      <h2>👋 Willkommen beim Zinebot!</h2>
+      <p>Teile 8 Bilder, und der Zinebot erstellt daraus ein Mini-Zine: als PDF zum Drucken und in Lesereihenfolge fürs Teilen.</p>
+      <form id="zineForm">
+        <fieldset>
+          <legend>Bitte lade 8 Bilder hoch (in Reihenfolge)</legend>
+          <label for="image1">Bild 1:</label><input type="file" id="image1" name="images" accept="image/*" required>
+<label for="image2">Bild 2:</label><input type="file" id="image2" name="images" accept="image/*" required>
+<label for="image3">Bild 3:</label><input type="file" id="image3" name="images" accept="image/*" required>
+<label for="image4">Bild 4:</label><input type="file" id="image4" name="images" accept="image/*" required>
+<label for="image5">Bild 5:</label><input type="file" id="image5" name="images" accept="image/*" required>
+<label for="image6">Bild 6:</label><input type="file" id="image6" name="images" accept="image/*" required>
+<label for="image7">Bild 7:</label><input type="file" id="image7" name="images" accept="image/*" required>
+<label for="image8">Bild 8:</label><input type="file" id="image8" name="images" accept="image/*" required>
+          <button type="submit">Zine erstellen 📄</button>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Erstellt von Nele Hirsch <a href="https://ebildungslabor.de">(eBildungslabor)</a> unter Nutzung von ChatGPT 4.0 |
+        Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></p>
+    </footer>
+  </body>
+</html>
